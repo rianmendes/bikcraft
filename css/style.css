@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --amarelo: #FEC63E;
+    --preto: #000000;
+    --fonte-texto: normal 1.8rem/2.5rem Georgia, serif;
+    --fonte-titulo: bold 2.4rem/2.4rem Arial, sans-serif;
+}
+
+body {
+    height: 200vh;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: var(--amarelo);
+    font: var(--fonte-texto);
+    padding: 8px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    font: bold .8rem Arial;
+    z-index: 10;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+/* MENU HAMBURGUER */
+
+.hamburguer {
+    width: 30px;
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.linhas {
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transition: .3s;
+}
+
+.hamburguer:hover>#linha1 {
+    transform: rotate(45deg) translate(9px, 7px);
+    transition: .3s;
+}
+
+.hamburguer:hover>#linha2 {
+    opacity: 0;
+    transition: .2s;
+}
+
+.hamburguer:hover>#linha3 {
+    transform: rotate(-45deg) translate(5px, -3px);
+    transition: .3s;
+}
+
+/* INTRODUÇÃO */
+
+.intro {
+    margin-top: 62px;
+    width: 100vw;
+    height: 380px;
+    background: url("../img/bg.jpg") no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    color: #FFF;
+}
+
+.intro-texto h1 {
+    font: bold 4.8rem Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.separador {
+    width: 10rem;
+    height: .2rem;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+#texto {
+    font: normal 1.5rem Georgia, serif;
+}
+
+#william {
+    text-transform: uppercase;
+    font: bold 2rem Arial, sans-serif;
+    letter-spacing: .1rem;
+}
+
+.intro-texto h1, .separador, .intro-texto>p {
+    margin-bottom: .8rem;
+}
+
+.btn {
+    font: bold 1.5rem Arial, sans-serif;
+    width: 15rem;
+    height: 4rem;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000;
+    background-color: var(--amarelo);
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TITULO */
+.produtos > h2 {
+    font: var(--fonte-titulo);
+    margin-top: 4rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+.separador-preto {
+    background-color: #000;
+    margin-bottom: 2rem;
+}
+/* TITULO */
+
+/* GRID DE PRODUTOS */
+.tipo-produtos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.produto-icone {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto img {
+    padding: .5rem 0rem;
+}
+
+.produto-descricao {
+    background-color: var(--amarelo);
+    padding: 1.5rem;
+    font: bold 1.8rem/2.5rem Georgia, serif;
+    text-align: center;
+}
+/* GRID DE PRODUTOS */
+
+/* BOTAO PRODUTOS */
+.produtos > p {
+    margin: 4rem 0rem 1rem 0rem;
+    font: var(--fonte-texto);
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1401px) {
+    .intro {
+        background-size: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    ul {
+        display: none;
+    }
+    .hamburguer {
+        display: flex;
+    }
+    .intro {
+        background: url("../img/bg-mobile.jpg") no-repeat center;
+    }
+    .intro-texto h1 {
+        font: bold 3rem Arial, sans-serif;
+    }
+    
+    #texto {
+        font: bold 1.3rem Georgia, serif;
+    }
+    #william {
+        font: bold 1.5rem Arial, sans-serif;
+    }
+
+    .tipo-produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
