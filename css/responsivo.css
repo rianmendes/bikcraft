@@ -1,0 +1,104 @@
+@media only screen and (min-width: 1280px) {
+    .intro {
+        background-size: 100%;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio-grid-item:nth-child(3) {
+        width: 460px;
+    }
+
+    .portfolio-grid-item:nth-child(3) > img {
+        width: 100%;
+    }
+
+    .logo-sobre {
+        position: relative;
+        top: .9rem;
+    }
+
+    .sobre img, .qualidades {
+        transform: scale(.8);
+    }
+
+    .separador-preto {
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    ul {
+        display: none;
+    }
+    .hamburguer {
+        display: flex;
+    }
+    .intro {
+        background: url("../img/bg-mobile.jpg") no-repeat center;
+    }
+    .intro-texto h1 {
+        font: bold 3rem Arial, sans-serif;
+    }
+    
+    #texto {
+        font: bold 1.3rem 'Merriweather', serif;
+    }
+    #william {
+        font: bold 1.5rem Arial, sans-serif;
+    }
+
+    .tipo-produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-grid {
+        width: 300px;
+    }
+
+    .portfolio-grid-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .portfolio-grid-item.portfolio-grid-item:nth-child(3) {
+        width: 300px;
+    }
+
+    .portfolio-grid-item > img {
+        max-width: 300px;
+    }
+
+    .linhas-sobre img {
+        display: none;
+    }
+
+    .qualidades {
+        flex-direction: column;
+        min-width: auto;
+    }
+
+    .linha-vertical {
+        width: .3rem;
+        height: 6rem;
+        background-color: #000;
+    }
+
+    .linha-vertical:nth-child(1) {
+        height: 3rem;
+        margin-top: 2rem;
+    }
+
+    .qualidade-item {
+        border-width: .4rem;
+        border-style: solid;
+        padding: 2rem;
+        width: 300px;
+    }
+}
