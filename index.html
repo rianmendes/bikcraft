@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mygrid.css">
+    <link rel="stylesheet" href="css/responsivo.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <div class="container">
+        <div class="container flex-row flex-between">
             <img src="img/logo.png" alt="Logo da Bikcraft">
             <ul>
                 <li><a href="#header">Home</a></li>
@@ -35,13 +36,13 @@
             <p id="texto">"não tenha nada na sua casa que você<br>
                 não considere útil ou não ache bonito"</p>
             <div class="separador"></div>
-            <p id="william">Willian Morris</p>
+            <p id="william">William Morris</p>
         </div>
         <button class="btn">ORÇAMENTO</button>
     </section>
 
-    <section class="produtos container">
-        <h2>Produtos</h2>
+    <section class="produtos container flex-column">
+        <h2 class="titulo">Produtos</h2>
         <div class="separador separador-preto"></div>
         <div class="tipo-produtos">
             <div class="produto grid-1-3">
@@ -69,8 +70,59 @@
                 </div>
             </div>
         </div>
-        <p>Conheça nossos produtos</p>
+        <p class="texto-btn">Conheça nossos produtos</p>
         <button class="btn">ORÇAMENTO</button>
+    </section>
+    <section class="portfolio flex-column">
+        <div class="container flex-column">
+            <h2 class="titulo">Portfólio</h2>
+            <div class="separador"></div>
+            <div class="portfolio-grid">
+                <div class="portfolio-grid-item">
+                    <img src="img/passeio.jpg" alt="Imagem de uma bicicleta de passeio">
+                </div>
+                <div class="portfolio-grid-item">
+                    <img src="img/retro.jpg" alt="Imagem de uma bicicleta retrô">
+                </div>
+                <div class="portfolio-grid-item">
+                    <img src="img/esporte.jpg" alt="Imagem de uma bicicleta esportiva">
+                </div>
+            </div>
+        </div>
+        <p class="texto-btn">Conheça alguns de nossos projetos</p>
+        <button class="btn-preto">PORTFÓLIO</button>
+    </section>
+
+    <section class="sobre">
+        <div class="container flex-column">
+            <h2 class="titulo">Sobre</h2>
+            <div class="separador separador-preto"></div>
+            <div class="logo-sobre"><img src="img/bikcraft-qualidade.png" alt="Logo da marca em amarelo"></div>
+            <div class="linhas-sobre"><img src="img/linhas.png" alt="Linhas levando a logo da marca às suas qualidades">
+            </div>
+            <div class="qualidades flex-row">
+                <div class="linha-vertical"></div>
+                <div class="qualidade-item">
+                    <h3 class="titulo-pequeno">Durabilidade</h3>
+                    <div class="separador separador-preto"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, vitae!</p>
+                </div>
+                <div class="linha-vertical"></div>
+                <div class="qualidade-item">
+                    <h3 class="titulo-pequeno">Design</h3>
+                    <div class="separador separador-preto"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aut!</p>
+                </div>
+                <div class="linha-vertical"></div>
+                <div class="qualidade-item">
+                    <h3 class="titulo-pequeno">Sustentabilidade</h3>
+                    <div class="separador separador-preto"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, fuga.</p>
+                </div>
+            </div>
+            <p class="texto-btn">Saiba mais sobre nossa empresa</p>
+            <button class="btn">Sobre</button>
+        </div>
     </section>
 </body>
 

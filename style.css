@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --amarelo: #FEC63E;
+    --preto: #000000;
+    --fonte-texto: normal 1.4rem/2.0rem 'Merriweather', serif;
+    --fonte-titulo: bold 2.4rem/2.4rem Arial, sans-serif;
+    --fonte-titulo-pequeno: bold 1.8rem/1.8rem Arial, sans-serif;
+}
+
+body {
+    height: 200vh;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: var(--amarelo);
+    font: var(--fonte-texto);
+    padding: 8px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    font: bold .8rem Arial;
+    z-index: 10;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+/* MENU HAMBURGUER */
+
+.hamburguer {
+    width: 30px;
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.linhas {
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transition: .3s;
+}
+
+.hamburguer:hover>#linha1 {
+    transform: rotate(45deg) translate(9px, 7px);
+    transition: .3s;
+}
+
+.hamburguer:hover>#linha2 {
+    opacity: 0;
+    transition: .2s;
+}
+
+.hamburguer:hover>#linha3 {
+    transform: rotate(-45deg) translate(5px, -3px);
+    transition: .3s;
+}
+
+/* INTRODUÇÃO */
+
+.intro {
+    margin-top: 62px;
+    width: 100vw;
+    height: 380px;
+    background: url("../img/bg.jpg") no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    color: #FFF;
+}
+
+.intro-texto h1 {
+    font: bold 4.8rem Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.separador {
+    width: 10rem;
+    height: .2rem;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+#texto {
+    font: normal 1.5rem 'Merriweather', serif;;
+}
+
+#william {
+    text-transform: uppercase;
+    font: bold 2rem Arial, sans-serif;
+    letter-spacing: .1rem;
+}
+
+.intro-texto h1, .separador, .intro-texto>p {
+    margin-bottom: .8rem;
+}
+
+.btn {
+    font: bold 1.5rem Arial, sans-serif;
+    width: 15rem;
+    height: 4rem;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000;
+    background-color: var(--amarelo);
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+    margin-bottom: 4rem;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TITULO */
+.titulo {
+    font: var(--fonte-titulo);
+    margin-top: 4rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+.separador-preto {
+    background-color: #000;
+    margin-bottom: 2rem;
+}
+/* TITULO */
+
+/* GRID DE PRODUTOS */
+.tipo-produtos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.produto-icone {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto img {
+    padding: .5rem 0rem;
+}
+
+.produto-descricao {
+    background-color: var(--amarelo);
+    padding: 1.5rem;
+    font: bold 1.8rem/2.5rem 'Merriweather', serif;
+    text-align: center;
+}
+/* GRID DE PRODUTOS */
+
+/* PORTFÓLIO */
+.portfolio {
+    background-color: #000;
+    color: var(--amarelo);
+}
+
+.portfolio .separador {
+    background-color: var(--amarelo);
+    margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.portfolio-grid-item:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.portfolio-grid-item:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.portfolio-grid-item:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+/* BOTAO PORTFOLIO */
+.texto-btn {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font: var(--fonte-texto);
+    font-weight: bold;
+}
+
+.btn-preto {
+    font: bold 1.5rem Arial, sans-serif;
+    color: var(--amarelo);
+    width: 15rem;
+    height: 4rem;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--amarelo);
+    background-color: #000;
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+    margin-bottom: 4rem;
+}
+
+.btn-preto:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+/* BOTAO PORTFOLIO */
+
+/* SOBRE */
+.linhas-sobre {
+    position: relative;
+    top: -5.9rem;
+    right: -.1rem;
+}
+
+.qualidades {
+    text-align: center;
+    position: relative;
+    top: -5.9rem;
+    min-width: 940px;
+}
+
+.qualidades p {
+    font: normal 1.4rem/2.0rem 'Merriweather', serif;
+}
+
+.titulo-pequeno {
+    font: var(--fonte-titulo-pequeno);
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+/* SOBRE */
+
