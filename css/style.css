@@ -111,7 +111,7 @@ ul li {
     letter-spacing: .1rem;
 }
 
-.intro-texto h1, .separador, .intro-texto>p {
+.intro-texto h1, .intro-texto .separador, .intro-texto>p {
     margin-bottom: .8rem;
 }
 
@@ -242,6 +242,10 @@ ul li {
 /* BOTAO PORTFOLIO */
 
 /* SOBRE */
+
+.sobre {
+    height: auto;
+}
 .linhas-sobre {
     position: relative;
     top: -5.9rem;
@@ -259,6 +263,15 @@ ul li {
     font: normal 1.4rem/2.0rem 'Merriweather', serif;
 }
 
+.sobre .texto-btn, .sobre .btn {
+    position: relative;
+    top: -5.9rem;
+}
+
+.sobre .btn {
+    margin-bottom: 0rem;
+}
+
 .titulo-pequeno {
     font: var(--fonte-titulo-pequeno);
     letter-spacing: .1rem;
@@ -266,3 +279,64 @@ ul li {
 }
 /* SOBRE */
 
+/* QUEBRA */
+.quebra {
+    background: url("../img/bg-footer.jpg") no-repeat center;
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+.quebra p {
+    font: var(--fonte-texto);
+    color: white;
+}
+
+.quebra p:last-child {
+    font: bold 14px/14px Arial, Helvetica, sans-serif;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.quebra .separador {
+    margin: .5rem 0;
+}
+/* QUEBRA */
+
+/* RODAPE */
+.rodape {
+    padding: 3rem;
+    background-color: #000;
+    color: #FFF;
+}
+
+.rodape .flex-row, .rodape .flex-between{
+    align-items: flex-start;
+}
+
+.rodape .titulo {
+    margin-top: 0;
+}
+
+.rodape p {
+    font: var(--fonte-texto);
+}
+
+.rodape .separador {
+    margin: .5rem 0;
+}
+
+.rodape-item {
+    align-items: flex-start;
+    width: 30%;
+}
+/* RODAPE */
+
+/* COPYRIGHT */
+.copy {
+    background-color: var(--amarelo);
+    font: var(--fonte-texto);
+    font-weight: bold;
+    padding: 2rem;
+}
+/* COPYRIGHT */

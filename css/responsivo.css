@@ -1,7 +1,9 @@
 @media only screen and (min-width: 1280px) {
-    .intro {
+    .intro, .quebra {
         background-size: 100%;
     }
+
+     
 }
 
 @media only screen and (max-width: 1023px) {
@@ -29,6 +31,16 @@
 
     .separador-preto {
         margin-bottom: 1rem;
+    }
+
+    .rodape p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 878px) {
+    .rodape .titulo {
+        font-size: 2.0rem;
     }
 }
 
@@ -100,5 +112,46 @@
         border-style: solid;
         padding: 2rem;
         width: 300px;
+    }
+
+    .rodape-item {
+        width: 40%;
+    }
+
+    .rodape-item:nth-child(1) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .quebra p {
+        font-size: 1.2rem;
+    }
+
+    .rodape {
+        text-align: center;
+    }
+
+    .rodape > .flex-row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rodape .separador {
+        margin: .5rem auto;
+    }
+
+    .rodape-item {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .rodape .flex-between {
+        justify-content: space-evenly;
+    }
+
+    .centralizador {
+        display: none;
     }
 }
