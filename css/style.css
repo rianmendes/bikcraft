@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
-
-* {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-}
-
 :root {
     --amarelo: #FEC63E;
     --preto: #000000;
@@ -16,12 +8,7 @@
     --fonte-titulo-pequeno: bold 1.8rem/1.8rem Arial, sans-serif;
 }
 
-body {
-    height: 200vh;
-}
-
 /* CABEÇALHO */
-
 header {
     background-color: var(--amarelo);
     font: var(--fonte-texto);
@@ -38,11 +25,21 @@ ul {
 }
 
 ul li {
-    margin-left: 20px;
+    margin-left: .5rem;
 }
 
-/* MENU HAMBURGUER */
+header a {
+    padding: 1.5rem 1rem;
+}
 
+header a:hover {
+    border-width: 0rem 0rem .2rem 0rem;
+    border-style: solid;
+    border-color: #000;
+}
+/* CABEÇALHO */
+
+/* MENU HAMBURGUER */
 .hamburguer {
     width: 30px;
     height: 20px;
@@ -72,11 +69,11 @@ ul li {
     transform: rotate(-45deg) translate(5px, -3px);
     transition: .3s;
 }
+/* MENU HAMBURGUER */
 
-/* INTRODUÇÃO */
-
+/* INTRO HOME */
 .intro {
-    margin-top: 62px;
+    margin-top: 70px;
     width: 100vw;
     height: 380px;
     background: url("../img/bg.jpg") no-repeat center;
@@ -133,11 +130,151 @@ ul li {
     transform: scale(1.05);
     transition: .3s;
 }
+/* INTRO HOME */
 
-.produtos {
-    display: flex;
-    flex-direction: column;
+/* INTRO PRODUTOS */
+.intro-produtos {
+    height: 160px;
+    background: url("../img/bg-produtos.jpg") no-repeat center;
+    justify-content: center;
 }
+
+.intro-produtos h1 {
+    margin-bottom: .4rem;
+}
+/* INTRO PRODUTOS */
+
+/* GRID PRODUTOS*/
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 1rem;
+    width: 100%;  
+    font: var(--fonte-texto);
+    font-weight: bold;
+    padding: 4rem 0rem;
+}
+
+/* GRID 1 */
+.grid-produtos-item:nth-child(1) {
+    grid-column: 1 / 13;
+    grid-row: 1 / 9;
+    background: url("../img/bikcraft-passeio-1.jpg") no-repeat center;
+    background-size: 100%;
+    text-align: center; 
+}
+
+.grid-produtos-item:nth-child(2) {
+    grid-column: 13 / 17;
+    grid-row: 1 / 9;
+    background: url("../img/passeio.png") no-repeat center;
+    background-size: 100%;
+    background-color: #000;
+    object-fit: cover;
+}
+
+.grid-produtos-item:nth-child(3) {
+    grid-column: 1 / 9;
+    grid-row: 9 / 17;
+    background: url("../img/bikcraft-passeio-2.jpg") no-repeat center;
+    height: 280px;
+}
+
+.grid-produtos-item:nth-child(4) {
+    grid-column: 9 / 17;
+    grid-row: 9 / 17;
+    height: 100%;
+}
+/* GRID 1 */
+
+/* GRID 2 */
+.grid-produtos:nth-child(2) .grid-produtos-item:nth-child(1) {
+     background: url("../img/bikcraft-esporte-1.jpg") no-repeat center;
+     background-size: 100%;
+}
+
+.grid-produtos:nth-child(2) .grid-produtos-item:nth-child(2) {
+    background: url("../img/esporte.png") no-repeat center;
+    background-color: #000;
+}
+
+.grid-produtos:nth-child(2) .grid-produtos-item:nth-child(3) {
+    background: url("../img/bikcraft-esporte-2.jpg") no-repeat center;
+}
+/* GRID 2 */
+
+/* GRID 3 */
+.grid-produtos:nth-child(3) .grid-produtos-item:nth-child(1) {
+    background: url("../img/bikcraft-retro-1.jpg") no-repeat center;
+    background-size: 100%;
+}
+
+.grid-produtos:nth-child(3) .grid-produtos-item:nth-child(2) {
+    background: url("../img/retro.png") no-repeat center;
+    background-color: #000;
+}
+
+.grid-produtos:nth-child(3) .grid-produtos-item:nth-child(3) {
+    background: url("../img/bikcraft-retro-2.jpg") no-repeat center;
+}
+
+/* GRID 3 */
+ .grid-titulo {
+    margin: auto;
+    color: #FFF;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.grid-titulo .titulo {
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+.grid-texto {
+    padding: 4rem;
+    background-color: #000;
+    color: #FFF;
+}
+
+.grid-table {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: var(--amarelo);
+    height: auto;
+    width: 100% ;
+    text-align: center;
+}
+
+.grid-table div {
+    border-color: var(--preto);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.grid-table div:nth-child(1), .grid-table div:nth-child(3) {
+    border-left: none;
+}
+
+.grid-table div:nth-child(2) {
+    border-right: none;
+}
+
+.grid-table div:nth-child(3), .grid-table div:nth-child(4) {
+    border-bottom: none;
+}
+
+.grid-table div:nth-child(4) {
+    border-right: none;
+}
+
+.grid-table p {
+    padding: .9rem;
+}
+/* GRID PRODUTOS*/
 
 /* TITULO */
 .titulo {
@@ -278,6 +415,80 @@ ul li {
     text-transform: uppercase;
 }
 /* SOBRE */
+
+/* ORCAMENTO */
+.orcamento .flex-row {
+    align-items: unset;
+}
+
+.orcamento {
+    background-color: var(--preto);
+    color: #FFF;
+    text-align: center;
+    padding: 4rem 0rem;
+}
+
+.orcamento .titulo {
+    color: var(--amarelo);
+    margin-top: 0rem;
+}
+
+.orcamento .separador {
+    background-color: var(--amarelo);
+}
+
+/* FORMULARIO */
+.form {
+    width: 100%;
+    padding: 2rem;
+    font: var(--fonte-texto);
+}
+
+.form .flex-column {
+    align-items: flex-start;
+}
+
+.form input, textarea {
+    margin-bottom: 1rem;
+    min-width: 100%;
+    height: 3rem;
+    padding: .5rem;
+    border-width: .3rem;
+    border-style: solid;
+    border-color: var(--amarelo);
+    background-color: var(--preto);
+    color:var(--amarelo);
+    resize: vertical;
+    font:var(--fonte-texto);
+}
+
+.form textarea {
+    min-height: 100px;
+}
+
+.orcamento .btn-preto {
+    margin-bottom: 0;
+}
+/* FORMULARIO */
+
+/* DADOS */
+.dados {
+    min-width: 50%;
+    text-align: left;
+    padding: 4rem 0 0 2rem;
+    font: var(--fonte-texto);
+}
+
+.dados-contato h3 {
+    color: var(--amarelo);
+    font: var(--fonte-titulo);
+}
+
+.dados-contato p:nth-child(7), .dados-contato p:nth-child(9), .dados-contato p:nth-child(11) {
+    background-color: #222;
+}
+/* DADOS */
+
 
 /* QUEBRA */
 .quebra {
